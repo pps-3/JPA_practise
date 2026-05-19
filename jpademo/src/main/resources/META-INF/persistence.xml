@@ -1,0 +1,45 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             version="2.2">
+
+    <persistence-unit name="myjpa">
+
+        <!--Use Hibernate as JPA implementation-->
+        <provider>
+            org.hibernate.jpa.HibernatePersistenceProvider
+        </provider>
+
+        <properties>
+
+            <!-- Which database driver to use-->
+            <property name="javax.persistence.jdbc.driver"
+                value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+
+            <!-- Which database to connect-->
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:sqlserver://localhost:1433;databaseName=Jpa;encrypt=true;trustServerCertificate=true"/>
+
+            <!-- SQL Server username.-->
+            <property name="javax.persistence.jdbc.user"
+                value="sa"/>
+
+            <!-- SQL Server password.-->
+            <property name="javax.persistence.jdbc.password"
+                value="Preethi@123"/>
+
+            <!-- Hibernate should generate SQL for SQL Server syntax-->
+            <property name="hibernate.dialect"
+                value="org.hibernate.dialect.SQLServerDialect"/>
+
+            <!-- Automatically create/update tables -->
+            <property name="hibernate.hbm2ddl.auto"
+                value="update"/>
+
+            <!-- Print generated SQL in console-->
+            <property name="hibernate.show_sql"
+                value="true"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
