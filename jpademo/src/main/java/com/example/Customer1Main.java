@@ -1,7 +1,7 @@
 package com.example;
 import javax.persistence.*;
 
-public class Main {
+public class Customer1Main {
     public static void main(String[] args) {
         
         //creating entity manager factory 
