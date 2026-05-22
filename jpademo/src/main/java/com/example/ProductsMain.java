@@ -1,5 +1,7 @@
 package com.example;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class ProductsMain {
     public static void main(String[] args) {
@@ -36,4 +38,3 @@ public class ProductsMain {
 
 }
 
-//Deal with transaction taking two products" Commit / Roll back + handle exception.
